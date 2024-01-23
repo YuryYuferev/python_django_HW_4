@@ -40,8 +40,8 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('total_amount', models.DecimalField(decimal_places=2, max_digits=10)),
                 ('order_date', models.DateField(auto_now_add=True)),
-                ('client', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='django_3.client')),
-                ('products', models.ManyToManyField(to='django_3.product')),
+                ('client', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='django_4.client')),
+                ('products', models.ManyToManyField(to='django_4.product')),
             ],
         ),
     ]

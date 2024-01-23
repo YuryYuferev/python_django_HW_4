@@ -13,15 +13,14 @@ class Client(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=255)
     description = models.TextField()
-    price = models.DecimalField(max_digits=8, decimal_places=2)
-    quantity = models.IntegerField()
-    added_date = models.DateField(auto_now_add=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    quantity = models.PositiveIntegerField()
+    photo = models.ImageField(upload_to='product_photos')
 
     def __str__(self):
         return self.name
-
 
 class Order(models.Model):
     objects = None
